@@ -52,10 +52,17 @@ function testMP4Probe(test, pass, miss) {
 
     var diagnostic      = MP4Probe.getDiagnostic(mp4tree);
 
-    MP4Probe.dumpSamples(mp4tree);
-    MP4Probe.dumpTree(mp4tree);
+    //MP4Probe.dumpSamples(mp4tree);
+    //MP4Probe.dumpTree(mp4tree);
 
-    if (diagnostic.video.chunkLength === 1 &&
+    console.dir(diagnostic);
+
+    if (diagnostic.timescale === 1000 &&
+        diagnostic.duration === 1184 &&
+        diagnostic.duration_time === "00:00:01.184" &&
+        diagnostic.playback_rate === 1.0 &&
+        diagnostic.trackLength === 1 &&
+        diagnostic.video.chunkLength === 1 &&
         diagnostic.video.codec === "AVC" &&
         diagnostic.video.duration === 210352 &&
         diagnostic.video.duration_time === "00:00:01.184" &&

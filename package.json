@@ -1,6 +1,6 @@
 {
   "name": "uupaa.mp4probe.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "get MP4 diagnostic information (We love ffprobe)",
   "url": "https://github.com/uupaa/MP4Probe.js",
   "keywords": ["MP4", "prove", "diagnostic", "uupaa", "WebModule", "Unstable"],
